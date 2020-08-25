@@ -1,0 +1,209 @@
+$rootColor:#EC293C;
+$red-f0:#FF0000;
+$red-f45:#F94E5F;
+
+$orange-f60:#FF6600;
+
+$blue-03f:#0033FF;
+$blue-07f:#0072FE;
+$male:#3599ed;
+// 基本背景色
+$baseBgColor:#F5F5F5;
+
+// 失败
+$green:#20BF55;
+$green-0b6:#00B164;
+
+$yellow-fc1:#FFCA10;
+// 聊天室 背景色
+$roomBg:#ECECEC;
+$grayLevelOne: #4D4D4D;
+$grayLevelTwo: #535353;
+$grayLevelThree: #D1D1D1;
+// 聊天室footer功能区背景
+$featureBg:#F8F8F8;
+// 消息
+$roomMsgBg:#ACDFFF;
+$cyan-f:#EAFCFF;
+// footer 投注背景色
+$gray-e6:#E6E6E6;
+$gray-ed:#EDEDED;
+$gray-f78a:#F7F8FA;
+$roomBetMask:#FF7000;
+
+$roomBetBtnBg:#CCCCCC;
+
+$roomFoldBg:#EDEDED;
+
+$roomVoiceUnActive:#DDDDDD;
+
+$roomVoicePopupBg:#535353;
+
+//小标背景色
+$minTag:#FFD9DD;
+// 浅色文字
+$white:#FFFFFF;
+$white-fa:#FAFAFA;
+
+// placeholder 文字色 , 灰色分割线
+$gray-d7:#D7D7D7;
+
+$gray-d5:#D5D5D5;
+$gray-d6: #D6D6D6;
+
+// 深色文字
+$gray-66:#666666;
+$tit:#404040;
+$txt:#333;
+// 头像填充色
+$avatarFill:#BCBCBC;
+// 灰色箭头
+$gray-99:#999999;
+// 下划线
+$gray-f5:#F5F5F5;
+
+// 失败
+$fail:#20BF55;
+// 彩圈打底色
+$circleLottery:(1:#C1272D,
+    2:#C1272D,
+    7:#C1272D,
+    8:#C1272D,
+    12:#C1272D,
+    13:#C1272D,
+    18:#C1272D,
+    19:#C1272D,
+    23:#C1272D,
+    24:#C1272D,
+    29:#C1272D,
+    30:#C1272D,
+    34:#C1272D,
+    35:#C1272D,
+    40:#C1272D,
+    45:#C1272D,
+    46:#C1272D,
+
+    3:#29ABE2,
+    4:#29ABE2,
+    9:#29ABE2,
+    10:#29ABE2,
+    14:#29ABE2,
+    15:#29ABE2,
+    20:#29ABE2,
+    25:#29ABE2,
+    26:#29ABE2,
+    31:#29ABE2,
+    36:#29ABE2,
+    37:#29ABE2,
+    41:#29ABE2,
+    42:#29ABE2,
+    47:#29ABE2,
+    48:#29ABE2,
+
+    5:#009245,
+    6:#009245,
+    11:#009245,
+    16:#009245,
+    17:#009245,
+    21:#009245,
+    22:#009245,
+    27:#009245,
+    28:#009245,
+    32:#009245,
+    33:#009245,
+    38:#009245,
+    39:#009245,
+    43:#009245,
+    44:#009245,
+    49:#009245,
+);
+
+$plan-49:(1:#EC293C,
+    2:#EC293C,
+    7:#EC293C,
+    8:#EC293C,
+    12:#EC293C,
+    13:#EC293C,
+    18:#EC293C,
+    19:#EC293C,
+    23:#EC293C,
+    24:#EC293C,
+    29:#EC293C,
+    30:#EC293C,
+    34:#EC293C,
+    35:#EC293C,
+    40:#EC293C,
+    45:#EC293C,
+    46:#EC293C,
+
+    3:#2993EC,
+    4:#2993EC,
+    9:#2993EC,
+    10:#2993EC,
+    14:#2993EC,
+    15:#2993EC,
+    20:#2993EC,
+    25:#2993EC,
+    26:#2993EC,
+    31:#2993EC,
+    36:#2993EC,
+    37:#2993EC,
+    41:#2993EC,
+    42:#2993EC,
+    47:#2993EC,
+    48:#2993EC,
+
+    5:#20BF55,
+    6:#20BF55,
+    11:#20BF55,
+    16:#20BF55,
+    17:#20BF55,
+    21:#20BF55,
+    22:#20BF55,
+    27:#20BF55,
+    28:#20BF55,
+    32:#20BF55,
+    33:#20BF55,
+    38:#20BF55,
+    39:#20BF55,
+    43:#20BF55,
+    44:#20BF55,
+    49:#20BF55, );
+
+// 色波 特码 半波
+$sebo:(0:#EC293C,
+    1:#2993EC,
+    2:#20BF55);
+
+// 连胜榜 单双tag
+$tagsOD:#2993ec;
+$tagsCB:#20BF55;
+
+
+// 9 种玩法大类的标签色
+
+$playColors:(ds:#ff6b00,
+    dx:#ffb721,
+    sb:#ec293c,
+    sx:#1473fb,
+    hx:#7164ff,
+    ztm:#ad22e0,
+    zxbz:#18b4fc,
+    lm:#14db9e,
+    ws:#23c82f,
+    error:red);
+
+
+// 号码码一内球边框色
+$hm-m1-bd-blue:#2993EC;
+$hm-m1-bd-red:#EC293C;
+
+
+
+// 尾数 边框色
+$wsSeBoBD:(bdc-red:#EC293C,
+    bdc-blue:#2993EC,
+);
+// 尾数背景色
+$wsSeBoBG:(bgc-red:#EC293C,
+);

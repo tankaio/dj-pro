@@ -1,0 +1,1097 @@
+$iconPrefix:xIcon;
+// tabbar 栏标识数组
+$tabbarMap:home user circle activity;
+
+// icon通用样式
+*[class*="#{$iconPrefix}-"] {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+    // icon 的 tabbar 栏独立样式
+    &[class*="-tabbar"] {
+        display: block;
+        min-height: 20px;
+        min-width: 20px;
+    }
+
+    // 通用
+    &[class*="-cm"] {
+        display: inline-block;
+        vertical-align: middle;
+        min-height: 20px;
+        min-width: 20px;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        background-size: 100%;
+    }
+
+    // gender
+    &[class*="-gender"] {
+        display: inline-block;
+        vertical-align: middle;
+        min-height: 15px;
+        min-width: 15px;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+    }
+
+    // 客服图标
+    &[class$="-service"] {
+        display: inline-block;
+        vertical-align: middle;
+        min-height: 30px;
+        min-width: 30px;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+
+    // 首页zone
+    &[class*="-zone"] {
+        display: inline-block;
+        vertical-align: middle;
+        height: 47.5px;
+    }
+
+    // 分享
+    &[class*="-share"] {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &[class*="-fold"] {
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+    }
+
+    &[class*="-entrance"] {
+        height: 48px;
+        width: 48px;
+        display: inline-block;
+    }
+
+    &[class*="-room"] {
+        background-size: 100%;
+    }
+
+    &[class*="-circler"] {
+        background-size: contain;
+        width: 37.5px;
+        height: 37.5px;
+    }
+
+    &[class*="-hotrecommended"] {
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+    }
+
+    &[class*="-money"] {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+@mixin icons($multiple) {
+
+    // tabbar 栏样式
+    @each $var in $tabbarMap {
+        .#{$iconPrefix}-#{$var}-tabbar {
+            background-image: url('~img/icon/#{$var}@2x.png');
+
+            &.active {
+                background-image: url('~img/icon/#{$var}_active@2x.png');
+            }
+        }
+    }
+
+    .#{$iconPrefix}-chat-tabbar {
+        width: 45px;
+        height: 45px;
+        background-image: url('~img/icon/chat@2x.png');
+    }
+
+    //games-投注历史图标
+    .#{$iconPrefix}-lottery-record {
+        background-image: url(~img/icon/lottery-record#{$multiple}.png);
+    }
+
+    //games-玩法图标
+    .#{$iconPrefix}-games-chakan {
+        background-image: url(~img/icon/games-chakan#{$multiple}.png);
+    }
+
+    //games-投注选中
+    .#{$iconPrefix}-games-checked {
+        background-image: url(~img/icon/games-checked#{$multiple}.png);
+    }
+
+    //投注记录-headright
+    .#{$iconPrefix}-record-cm {
+        background-image: url(~img/icon/record#{$multiple}.png);
+    }
+
+    //投注记录-中奖图片
+    .#{$iconPrefix}-games-win-cm {
+        background-image: url(~img/icon/games-win#{$multiple}.png);
+    }
+
+    // 客服
+    .#{$iconPrefix}-service-cm {
+        background-image: url(~img/icon/service#{$multiple}.png);
+    }
+
+    // 登陆图标
+    .#{$iconPrefix}-user-cm {
+        background-image: url(~img/icon/login_user#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-pwd-cm {
+        background-image: url(~img/icon/pwd#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-phone-cm {
+        background-image: url(~img/icon/phone#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-auth-cm {
+        background-image: url(~img/icon/auth#{$multiple}.png);
+    }
+
+    // 大神
+    .#{$iconPrefix}-dasheng-zone {
+        width: 44px;
+        background-image: url(~img/icon/dasheng@2x.png);
+    }
+
+    // 连胜
+    .#{$iconPrefix}-liansheng-zone {
+        width: 44px;
+        background-image: url(~img/icon/liansheng@2x.png);
+    }
+
+    // 胜率
+    .#{$iconPrefix}-shenglv-zone {
+        width: 37px;
+        background-image: url(~img/icon/shenglv@2x.png);
+    }
+
+    // 冠军
+    .#{$iconPrefix}-guanjun-zone {
+        width: 37px;
+        background-image: url(~img/icon/guanjun@2x.png);
+    }
+
+    // home-money
+    .#{$iconPrefix}-home-money {
+        width: 20px;
+        height: 20px;
+        background-image: url(~img/icon/home-money#{$multiple}.png);
+    }
+
+    // home-money-white
+    .#{$iconPrefix}-home-money-white {
+        width: 20px;
+        height: 20px;
+        background-image: url(~img/icon/home-money-white#{$multiple}.png);
+    }
+
+    // 站内信列表未读
+    .#{$iconPrefix}-unmsg-cm {
+        background-image: url(~img/icon/unmsg#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-welc-cm {
+        background-image: url(~img/icon/welc_code#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-key-cm {
+        background-image: url(~img/icon/key#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-lock-cm {
+        background-image: url(~img/icon/lock#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-unlock-cm {
+        background-image: url(~img/icon/unlock#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-unlock-white-cm {
+        background-image: url(~img/icon/unlock-white#{$multiple}.png);
+    }
+
+    // 滚动公告图标
+    .#{$iconPrefix}-notice-cm {
+        background-image: url(~img/icon/notice#{$multiple}.png);
+    }
+
+    // 我的关注
+    .#{$iconPrefix}-follow-cm {
+        background-image: url(~img/icon/follow#{$multiple}.png);
+    }
+
+    // 我的粉丝
+    .#{$iconPrefix}-fans-cm {
+        background-image: url(~img/icon/fans#{$multiple}.png);
+    }
+
+    // 专家
+    .#{$iconPrefix}-export-cm {
+        background-image: url(~img/icon/export#{$multiple}.png);
+    }
+
+    // 赚钱
+    .#{$iconPrefix}-money-cm {
+        background-image: url(~img/icon/money#{$multiple}.png);
+    }
+
+    // 积分
+    .#{$iconPrefix}-integral-cm {
+        background-image: url(~img/icon/integral#{$multiple}.png);
+    }
+
+    // 金币
+    .#{$iconPrefix}-gold-cm {
+        background-image: url(~img/icon/gold#{$multiple}.png);
+    }
+
+    // 账单
+    .#{$iconPrefix}-bill-cm {
+        background-image: url(~img/icon/bill#{$multiple}.png);
+    }
+
+    // 站内信
+    .#{$iconPrefix}-msg-cm {
+        background-image: url(~img/icon/msg#{$multiple}.png);
+    }
+
+    // 更多
+    .#{$iconPrefix}-more-cm {
+        background-image: url(~img/icon/more#{$multiple}.png);
+    }
+
+    // 发布
+    .#{$iconPrefix}-publish-cm {
+        background-image: url(~img/icon/publish#{$multiple}.png);
+    }
+
+    //男
+    .#{$iconPrefix}-male-gender {
+        background-image: url(~img/icon/male#{$multiple}.png);
+    }
+
+    //女
+    .#{$iconPrefix}-female-gender {
+        background-image: url(~img/icon/female#{$multiple}.png);
+    }
+
+    //男
+    .#{$iconPrefix}-male-gray-gender {
+        background-image: url(~img/icon/male-gray#{$multiple}.png);
+    }
+
+    //女
+    .#{$iconPrefix}-female-gray-gender {
+        background-image: url(~img/icon/female-gray#{$multiple}.png);
+    }
+
+    // 奖期
+    .#{$iconPrefix}-period-cm {
+        background-image: url(~img/icon/period#{$multiple}.png);
+    }
+
+    // 筛选
+    .#{$iconPrefix}-filter-cm {
+        background-image: url(~img/icon/filter#{$multiple}.png);
+
+        &.active {
+            background-image: url(~img/icon/filter-active#{$multiple}.png);
+        }
+    }
+
+    // 皇冠1
+    .#{$iconPrefix}-crown0-cm {
+        background-image: url(~img/icon/crown0#{$multiple}.png);
+    }
+
+    // 皇冠2
+    .#{$iconPrefix}-crown1-cm {
+        background-image: url(~img/icon/crown1#{$multiple}.png);
+    }
+
+    // 皇冠3
+    .#{$iconPrefix}-crown2-cm {
+        background-image: url(~img/icon/crown2#{$multiple}.png);
+    }
+
+    // 问号
+    .#{$iconPrefix}-fun-cm {
+        background-image: url(~img/icon/fun#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-fun-white-cm {
+        background-image: url(~img/icon/fun-white#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-select-cm {
+        background-image: url(~img/icon/select#{$multiple}.png);
+    }
+
+    // QQ
+    .#{$iconPrefix}-QQ-service {
+        background-image: url(~img/icon/QQ@2x.png);
+    }
+
+    // wechat
+    .#{$iconPrefix}-wechat-service {
+        background-image: url(~img/icon/wechat#{$multiple}.png);
+    }
+
+    // service_blue
+    .#{$iconPrefix}-service_blue-service {
+        background-image: url(~img/icon/service_blue#{$multiple}.png);
+    }
+
+    // add 聊天室 加号按钮
+    .#{$iconPrefix}-add-room {
+        width: 24px;
+        height: 24px;
+        background-image: url(~img/icon/add#{$multiple}.png);
+    }
+
+    // emoji 聊天室 表情按钮
+    .#{$iconPrefix}-emoji-room {
+        width: 24.5px;
+        height: 24.5px;
+        background-image: url(~img/icon/emoji#{$multiple}.png);
+    }
+
+    // voice 聊天室 语音按钮
+    .#{$iconPrefix}-voice-room {
+        width: 26px;
+        height: 26px;
+        background-image: url(~img/icon/voice#{$multiple}.png);
+    }
+
+    //
+    .#{$iconPrefix}-keyboard-room {
+        width: 33px;
+        height: 33px;
+        background-image: url(~img/icon/keyboard#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-keyboard-up-room {
+        width: 33px;
+        height: 33px;
+        background-image: url(~img/icon/keyboard-up#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-send-room {
+        width: 26px;
+        height: 26px;
+        background-image: url(~img/icon/send#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-admin-room {
+        width: 15px;
+        height: 15px;
+        background-image: url(~img/icon/admin#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-muted-room {
+        width: 15px;
+        height: 15px;
+        background-image: url(~img/icon/muted#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-img-fold {
+        background-image: url(~img/icon/img#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-camera-fold {
+        background-image: url(~img/icon/camera#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-red-packet-fold {
+        background-image: url(~img/icon/red-packet#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-muted-fold {
+        background-image: url(~img/icon/muted-fold#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-voice-fold {
+        background-image: url(~img/icon/voice-fold#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-share-order-fold {
+        background-image: url(~img/icon/share-order#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-share-plan-fold {
+        background-image: url(~img/icon/share-plan#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-jam-fold {
+        background-image: url(~img/icon/jam#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-niuniu-fold {
+        width: 60px;
+        height: 60px;
+        background-image: url(~img/icon/niuniu#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-bookmarker-fold {
+        width: 60px;
+        height: 60px;
+        background-image: url(~img/icon/bookmarker#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-voice-pop {
+        height: 65px;
+        width: 65px;
+        background-image: url(~img/icon/voice-pop#{$multiple}.png);
+    }
+
+    // 历史搜索记录删除
+    .#{$iconPrefix}-delete {
+        height: 18px;
+        width: 18px;
+        background-image: url(~img/icon/delete#{$multiple}.png);
+    }
+
+    // 分享
+    .#{$iconPrefix}-qq-share {
+        height: 34px;
+        width: 29.5px;
+        background-image: url(~img/icon/qq-share@2x.png);
+    }
+
+    // 微信
+    .#{$iconPrefix}-wechat-share {
+        height: 34px;
+        width: 34px;
+        background-image: url(~img/icon/wechat-share@2x.png);
+    }
+
+    // 朋友圈
+    .#{$iconPrefix}-friend-share {
+        height: 34px;
+        width: 34px;
+        background-image: url(~img/icon/friend-share@2x.png);
+    }
+
+    // 短信
+    .#{$iconPrefix}-message-share {
+        height: 30px;
+        width: 34px;
+        background-image: url(~img/icon/message-share@2x.png);
+    }
+
+    .#{$iconPrefix}-ggl-bg {
+        background-image: url(~img/icon/ggl-bg#{$multiple}.png);
+    }
+
+    // 聊天室红包消息打开状态
+    .#{$iconPrefix}-redbag-o {
+        width: 26px;
+        height: 30.5px;
+        background-image: url(~img/icon/redbag-o#{$multiple}.png);
+    }
+
+    // 聊天室红包消息未打开状态
+    .#{$iconPrefix}-redbag {
+        width: 26.5px;
+        height: 30.5px;
+        background-image: url(~img/icon/redbag#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-nn-fail {
+        width: 30px;
+        height: 29px;
+        background-image: url(~img/icon/nn-fail#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-nn-win {
+        width: 30px;
+        height: 29px;
+        background-image: url(~img/icon/nn-win#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-boom {
+        width: 16px;
+        height: 17px;
+        display: inline-block;
+        background-image: url(~img/icon/boom#{$multiple}.png);
+    }
+
+    // 接龙状态展示
+    .#{$iconPrefix}-dragon {
+        width: 30.5px;
+        height: 30.5px;
+        display: inline-block;
+        background-image: url(~img/icon/dragon#{$multiple}.png);
+    }
+
+    // 红包房 钱包
+    .#{$iconPrefix}-wallet-entrance {
+        background-image: url(~img/icon/wallet#{$multiple}.png);
+    }
+
+    // 明细
+    .#{$iconPrefix}-detail-entrance {
+        background-image: url(~img/icon/detail#{$multiple}.png);
+    }
+
+    // 组
+    .#{$iconPrefix}-group-entrance {
+        background-image: url(~img/icon/group#{$multiple}.png);
+    }
+
+    // 投注红包弹窗关闭按钮
+    .#{$iconPrefix}-redbag-pop-close {
+        background-image: url(~img/icon/redbag-pop-close#{$multiple}.png);
+    }
+
+    // 聊天室红包游戏快捷按钮
+    .#{$iconPrefix}-play-game {
+        width: 21.5px;
+        height: 23px;
+        background-image: url(~img/icon/play-game#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-red-circler {
+        background-image: url(~img/icon/circle-red#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-green-circler {
+        background-image: url(~img/icon/circle-green#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-blue-circler {
+        background-image: url(~img/icon/circle-blue#{$multiple}.png);
+    }
+
+    // 购彩聊天群
+    .#{$iconPrefix}-chat-c-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/chat-c#{$multiple}.png);
+    }
+
+    // 红包聊天群
+    .#{$iconPrefix}-chat-f-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/chat-f#{$multiple}.png);
+    }
+
+    // 晒单圈
+    .#{$iconPrefix}-mome-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/mome#{$multiple}.png);
+    }
+
+    // 极速六合
+    .#{$iconPrefix}-liuhe-js-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/liuhe-js#{$multiple}.png);
+    }
+
+    // 三分六合
+    .#{$iconPrefix}-liuhe-sf-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/liuhe-sf#{$multiple}.png);
+    }
+
+    // 香港六合
+    .#{$iconPrefix}-liuhe-xg-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/liuhe-xg#{$multiple}.png);
+    }
+
+    // 一分六合
+    .#{$iconPrefix}-liuhe-yf-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/liuhe-yf#{$multiple}.png);
+    }
+
+    // 六合社区
+    .#{$iconPrefix}-news-hotrecommended {
+        background-image: url(~img/icon/hotrecommended/news#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-specialist {
+        width: 15px;
+        height: 15px;
+        background-image: url(~img/icon/specialist#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-gold-money {
+        background-image: url(~img/icon/gold-m#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-integral-money {
+        background-image: url(~img/icon/integral-m#{$multiple}.png);
+    }
+
+    .#{$iconPrefix}-emoji-toutiao {
+        background-image: url(~img/icon/emoji-toutiao#{$multiple}.png);
+    }
+}
+
+@include icons('');
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+    @include icons('@2x');
+}
+
+.van-icon-qr {
+    font-size: 20px;
+}
+
+// 非图标类 icon 黑色相机角标
+.camera-icon {
+    position: absolute;
+    height: 10px;
+    width: 15px;
+    background-color: #333333;
+    border-radius: 2px;
+
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    &::after {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        border: 1px solid $white;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &::before {
+        background-color: #333333;
+        height: 2.5px;
+        width: 8px;
+        top: 0;
+        left: 50%;
+        transform: translateY(-80%) translateX(-50%);
+        border-radius: 2px;
+    }
+}
+
+// 玩法选中时 右下角标 对勾
+[class*="-btn"].right,
+[class*="-button"].right {
+    position: relative;
+    overflow: hidden;
+
+    i {
+        position: absolute;
+        height: 50px;
+        width: 32px;
+        background-color: $white;
+        bottom: 0;
+        right: 0;
+        transform: rotateZ(60deg) translateX(80%) translateY(20%);
+    }
+
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        border-right: 1px solid $rootColor;
+        border-bottom: 1px solid $rootColor;
+        width: 6px;
+        height: 10px;
+        right: 5px;
+        bottom: 5px;
+        transform: rotateZ(45deg);
+    }
+}
+
+// close 圆形
+.close-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid $txt;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after,
+    &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 12px;
+        border-top: 1px solid $txt;
+    }
+
+    &::after {
+        transform: rotateZ(45deg);
+    }
+
+    &::before {
+        transform: rotateZ(135deg);
+    }
+}
+
+// 玩法tag 标签 9 大类基本色
+.tag-bar>.tag {
+
+    @each $k,
+    $v in $playColors {
+        &.#{$k} {
+            @if $k=='error' {
+                background-color: $v;
+                color: black;
+
+                &::before {
+                    content: '#{$k}';
+                    display: block;
+                    position: absolute;
+                    writing-mode: vertical-rl;
+                }
+
+                >* {
+                    display: none;
+                }
+            }
+
+            @else {
+                background-color: $v;
+            }
+
+        }
+    }
+}
+
+// 玩法颜色, 其实这个不属于 icon 分类,但是目前没有合适的位置
+.play {
+
+    @each $k,
+    $v in $playColors {
+        &.#{$k} {
+            color: $v;
+        }
+    }
+}
+
+
+// 充值列表右上角斜向横幅
+.banner-recharge {
+    position: absolute;
+    height: 28px;
+    width: 95px;
+    background-color: $rootColor;
+    font-size: 9px;
+    color: $white;
+    line-height: 28px;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+    transform: rotateZ(45deg);
+    z-index: 10;
+
+    &::before,
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        background-color: $rootColor;
+    }
+
+
+}
+
+// 账户清单,充值失败,红色圆点
+.fail-circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $rootColor;
+}
+
+// 账户清单充值失败,小对勾
+.success-tick {
+    display: inline-block;
+    position: relative;
+    width: 6px;
+    height: 8px;
+    transform-origin: 50% 50%;
+    transform: rotateZ(45deg) translateY(-50%);
+
+    &::before,
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        background-color: $green;
+        border-radius: 1px;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 2px;
+    }
+
+    &::after {
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 2px;
+    }
+}
+
+// 专家
+// .specialist-icon {
+//     display: inline-block;
+//     position: relative;
+//     width: 15px;
+//     height: 15px;
+//     // background-color: $rootColor;
+//     border-radius: 2.5px;
+
+//     &::after {
+//         position: absolute;
+//         display: block;
+//         content: '专';
+//         font-weight: 600;
+//         background-color: $rootColor;
+//         font-size: 22px;
+//         color: $white;
+//         line-height: 30px;
+//         width: 30px;
+//         text-align: center;
+//         height: 30px;
+//         border-radius: 5px;
+//         left: 50%;
+//         top: 50%;
+//         transform: translateX(-50%) translateY(-50%) scale(.5);
+//     }
+// }
+
+// 没有数据时渲染 提示文字 使用该类的dom上需要 data-null 属性
+.data-null,
+.data-null-fill {
+    position: relative;
+    min-height: 145px;
+
+    &::before {
+        content: attr(data-null);
+        position: absolute;
+        display: block;
+        background-color: $white;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        min-height: 145px;
+        text-align: center;
+        line-height: 145px;
+        font-size: 13px;
+        color: $txt;
+    }
+}
+
+.data-null-fill::before {
+    position: relative;
+}
+
+// 语音播放动画
+@mixin aud($modifier) {
+    @keyframes b3-#{$modifier} {
+        0% {
+            border-#{$modifier}-color: transparent;
+        }
+
+        66% {
+            border-#{$modifier}-color: transparent;
+        }
+
+        66.6% {
+            border-#{$modifier}-color: #000;
+        }
+
+        100% {
+            border-#{$modifier}-color: #000;
+        }
+    }
+
+    @keyframes b2-#{$modifier} {
+        0% {
+            border-#{$modifier}-color: transparent;
+        }
+
+        33% {
+            border-#{$modifier}-color: transparent;
+        }
+
+        33.3% {
+            border-#{$modifier}-color: #000;
+        }
+
+        100% {
+            border-#{$modifier}-color: #000;
+        }
+    }
+}
+
+@mixin transparent-noleft {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: #000;
+}
+
+@mixin transparent-noright {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #000;
+}
+
+// audio player
+.audio-player-bar {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-player {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    transform: translateX(-10px) scale(.5);
+    overflow: hidden;
+    position: absolute;
+
+    @include transparent-noright;
+
+    &::after,
+    &::before {
+        box-sizing: border-box;
+        display: block;
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        overflow: hidden;
+    }
+
+    &::before {
+        width: 30px;
+        height: 30px;
+        border: 4px solid #000;
+        @include transparent-noright;
+    }
+
+    &::after {
+        border: 6px solid #000;
+        @include transparent-noright;
+    }
+
+    &.animate {
+        animation: 900ms b3-right;
+        animation-iteration-count: infinite;
+
+        &::before {
+            animation: 900ms b2-right;
+            animation-iteration-count: infinite;
+        }
+
+        @include aud('right')
+    }
+}
+
+.self {
+    .audio-player {
+        transform: translateX(10px) scale(.5);
+        @include transparent-noleft;
+
+        &::before {
+            @include transparent-noleft;
+        }
+
+        &::after {
+            @include transparent-noleft;
+        }
+
+        &.animate {
+            animation: 900ms b3-left;
+            animation-iteration-count: infinite;
+
+            &::before {
+                animation: 900ms b2-left;
+                animation-iteration-count: infinite;
+            }
+
+            @include aud('left')
+        }
+    }
+}
+
+// 申精标志
+.essence {
+    width: 16.5px;
+    height: 16.5px;
+    position: relative;
+    display: inline-block;
+    vertical-align: text-top;
+
+    &::before {
+        position: absolute;
+        content: '精';
+        display: block;
+        font-size: 24px;
+        color: $rootColor;
+        width: 33px;
+        height: 33px;
+        text-align: center;
+        line-height: 33px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) scale(.5);
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 33px;
+        height: 33px;
+        border-radius: 4px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) scale(.5);
+        border: 1px solid $rootColor;
+
+    }
+}

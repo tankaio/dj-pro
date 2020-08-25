@@ -1,0 +1,99 @@
+*[class*="-bg"] {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin bgImg($multiple) {
+    .service-bg {
+        background-size: 100% 100%;
+        background-image: url(~img/service-bg#{$multiple}.png);
+    }
+
+    .service-tit-bg {
+        background-image: url(~img/tit#{$multiple}.png);
+
+    }
+
+    // 红包开奖后状态
+    .redbag-o-bg {
+        background-size: cover;
+        background-image: url(~img/redbag-bg-o#{$multiple}.png);
+    }
+
+    // 红包未开状态
+    .redbag-bg {
+        background-size: cover;
+        background-image: url(~img/redbag-bg#{$multiple}.png);
+    }
+
+    .niuniu-bg {
+        width: 61.5px;
+        height: 47px;
+        background-image: url(~img/niuniu#{$multiple}.png);
+    }
+
+    // 打开红包弹窗背景
+    .redbag-open-bg {
+        background-image: url(~img/redbag-open#{$multiple}.png);
+    }
+
+    // 烟花
+    .fireworks-bg {
+        background-image: url(~img/fireworks#{$multiple}.png);
+    }
+
+    // 投注弹窗背景
+    .bet-pop-bg {
+        background-image: url(~img/bet-pop-bg#{$multiple}.png);
+    }
+
+    // 闲/弹窗投注倒计时标题
+    .xian-countdown-tit-bg {
+        background-image: url(~img/xian-countdown-tit-bg#{$multiple}.png);
+    }
+
+    // 闲/弹窗投注倒计时标题
+    .admin-countdown-bg {
+        background-image: url(~img/admin-countdown-bg#{$multiple}.png);
+    }
+
+    // 抢红包倒计时标题
+    .grab-red-tit-bg {
+        background-image: url(~img/grab-red-tit-bg#{$multiple}.png);
+    }
+
+    .wallet-instructions-bg {
+        background-image: url(~img/wallet-instructions#{$multiple}.png);
+    }
+
+    // 首页六合开奖区背景
+    .open-lottery-bg {
+        background-image: url(~img/open-lottery-bg#{$multiple}.png);
+    }
+
+    // 刮奖背景
+    .scratch-bg {
+        background-image: url(~img/scratch-bg#{$multiple}.png);
+    }
+
+    // 无数据填充
+    .nodata-bg {
+        width: 152px;
+        height: 160px;
+        background-image: url(~img/nodata-bg.png);
+    }
+
+    .win-bg {
+        width: 92.5px;
+        height: 52.5px;
+        background-image: url(~img/win#{$multiple}.png);
+    }
+}
+
+@include bgImg('');
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+    @include bgImg('@2x')
+}

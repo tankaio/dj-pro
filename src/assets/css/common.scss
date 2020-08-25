@@ -1,0 +1,205 @@
+//  禁止长按复制文字
+* {
+    -webkit-touch-callout: none;
+    /*系统默认菜单被禁用*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    -moz-user-select: none;
+    /*火狐*/
+    -ms-user-select: none;
+    /*IE10*/
+    user-select: none;
+}
+
+input,
+textarea {
+    -webkit-user-select: auto;
+    /*webkit浏览器*/
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* For some Androids */
+}
+
+// 禁止长按复制 图片
+// 禁止长按选择文字
+* {
+    -webkit-touch-callout: none;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+* {
+    // touch-action: none;
+    touch-action: pan-y;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+    display: none;
+}
+
+img {
+    pointer-events: none;
+    position: relative;
+
+    // 图片加载前的灰色填充
+    &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $avatarFill;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: #F7F8FA;
+    min-width: 320PX;
+    max-width: 768PX;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    touch-action: manipulation;
+    display: flex;
+
+    #app {
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+
+        .x-layout {
+            overflow: hidden;
+            flex: 1;
+
+            .xl-main-wapper {
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior: contain;
+                scroll-behavior: smooth;
+                display: flex;
+                flex-direction: column;
+
+                #scrollTopFlag,
+                #scrollBottomFlag {
+                    height: 0;
+                    flex: none;
+                    position: relative;
+                    display: block;
+                    width: 99.99vw;
+                }
+
+                .main-content {
+                    flex: 1;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+
+                    .fill_top,
+                    .fill_bottom {
+                        flex: none;
+                    }
+
+                    .fill_center {
+                        flex: 1;
+                        position: relative;
+                        // display: flex;
+                        // flex-direction: column;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@viewport {
+    max-width: 768PX;
+    min-width: 320PX;
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 1;
+    user-zoom: 0;
+}
+
+div[class*="-root"] {
+    // padding-top: 44px;
+    flex: 1;
+}
+
+// 8px 灰
+.gray-8::before {
+    content: '';
+    display: block;
+    position: relative;
+    background-color: $baseBgColor;
+    height: 8px;
+}
+
+.gray-after-8::after {
+    content: '';
+    display: block;
+    position: relative;
+    background-color: $baseBgColor;
+    height: 8px;
+}
+
+// 
+
+@keyframes lotteryAnimate {
+    0% {
+        transform: translateY(-36px);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.disable {
+    pointer-events: none;
+    opacity: .8;
+}
+
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+
+    // ios 底部安全区适配
+    .ios-bt {
+        padding-bottom: constant(safe-area-inset-bottom);
+        /* 兼容 iOS < 11.2 */
+        padding-bottom: env(safe-area-inset-bottom);
+        /* 兼容 iOS >= 11.2 */
+    }
+}
+
+.tabbarFill {
+    &::after {
+        display: block;
+        position: relative;
+        content: ' ';
+        height: 50px;
+    }
+}

@@ -1,0 +1,114 @@
+.van-field {
+    &:not(:last-child)::after {
+        right: 16px;
+    }
+
+    .van-field__control {
+        &::placeholder {
+            color: $gray-d7;
+        }
+    }
+}
+
+.van-cell::after {
+    left: 0;
+}
+
+.van-cell:not(:last-child)::after {
+    left: 0;
+}
+
+.van-cell-group {
+    padding-top: 8px;
+    background-color: $baseBgColor;
+}
+
+.van-hairline--bottom::after {
+    left: -50%;
+    right: -50%;
+}
+
+.van-icon {
+    margin-top: -1px;
+    font-size: 16px;
+
+    .van-icon-question-o {
+        color: $white;
+    }
+}
+
+*::placeholder {
+    color: $gray-99;
+    -webkit-text-fill-color: $gray-99;
+}
+
+// dialog 弹窗左对齐,
+.table {
+    .van-dialog__message--has-title {
+        text-align: left;
+    }
+}
+
+.van-button {
+    &.wd245 {
+        width: 245px;
+        border-radius: 4px;
+    }
+
+    &.wd200 {
+        width: 200px;
+        border-radius: 5px;
+    }
+}
+
+.van-dialog__confirm {
+    color: $red-f0;
+}
+
+.van-notify {
+    top: 15px;
+    left: 15%;
+    width: 70%;
+    border-radius: 18px;
+    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: .3);
+    background-color: $white;
+    color: $txt;
+    z-index: 99999 !important;
+
+    &.van-notify--danger {
+        background-color: $rootColor;
+        color: $white !important;
+    }
+}
+
+.van-nav-bar .van-icon {
+    font-size: 20px;
+    color: $white;
+}
+
+.van-search {
+    padding: 5px;
+    border-radius: 2.5px;
+
+    .van-search__content--round {
+        border-radius: 2.5px;
+    }
+
+    .van-field__control {
+        flex: 1;
+    }
+}
+
+.van-button--danger {
+    background-color: $rootColor;
+    border: 1px solid $rootColor;
+}
+
+.van-button--plain {
+    background-color: $white;
+}
+
+.van-tabs__nav {
+    min-width: 99.99999vw;
+    max-width: 99.99999vw;
+}
